@@ -29,3 +29,27 @@ plt.show()
 #%%
 plt.plot(size, price)
 plt.show()
+
+#%%
+def text_strip_split(text):
+    
+    list = [ '!' , ',' , '.' , '?' , ':' , '/' , '*' , '#' , '%' , '\\' , '_' , '-' , '=' , '+' , '&' ,';']
+
+    for i in list:
+        text = text.replace( i  , ' ').strip()
+    text = text.split()
+
+    print()
+
+    while True:
+        x = int(input('Enter number word that i should print on console:\n')) - 1
+        if x > len(list) or x < 0:
+            print('Enter other number!')
+        else:
+            break
+
+    print(text[x])
+
+
+word = input('Write the something text with special symbols: \n')
+print(text_strip_split(word))
