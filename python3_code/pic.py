@@ -1,7 +1,8 @@
+#%%
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
-price, size = np.loadtxt('house.csv', delimiter='|', usecols=(1,2), unpack=True)
+price, size = np.loadtxt('C:\\Users\\11320\\code\\lianjia_spyder\\python3_code\\house.csv', delimiter='|', usecols=(1,2), unpack=True)
 print(price)
 print(size)
 price_mean = np.mean(price)
@@ -12,10 +13,7 @@ price_var = np.var(price)
 size_var = np.var(size)
 print("价格的方差：", price_var)
 print("面积的方差：", size_var)
-import csv
-import numpy as np
-import matplotlib.pyplot as plt
-price, size = np.loadtxt('house.csv', delimiter='|', usecols=(1,2), unpack=True)
+#%%
 plt.figure()
 plt.subplot(211)
 plt.title("/ 10000RMB")
@@ -26,4 +24,8 @@ plt.hist(size, bins=20)
 plt.figure(2)
 plt.title("price")
 plt.plot(price)
+plt.plot(size, price)
+plt.show()
+#%%
+plt.plot(size, price)
 plt.show()
